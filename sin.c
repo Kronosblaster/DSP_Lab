@@ -1,15 +1,18 @@
 #include<stdio.h>
 #include<math.h>
-int main(){
-    float range=(4*M_PI)/1000;
-    float time[1000];
+
+float time[100];
+float result[100];
+void main(){
+    float range=(4*M_PI)/100;
     time[0]=-2*M_PI;
-    for(int i=1;i<1000;i++){
+    int i=0;
+    for(i=1;i<100;i++){
         time[i]=time[i-1]+range;
     }
-    for(int i=0;i<1000;i++){
-        time[i]=sin(time[i]);
-        printf("%f\n",time[i]);
+    for(i=0;i<100;i++){
+        result[i]=sin(time[i]);
+        printf("%f\n",result[i]);
+
     }
-    return 1;
 }
